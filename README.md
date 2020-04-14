@@ -1,7 +1,7 @@
 # College Admission React Native Expo based App
 1. Install node js from https://nodejs.org/en/download/
 2. Install yarn from https://classic.yarnpkg.com/en/docs/install/#windows-stable
-3. Install adb
+3. Install adb from https://adb.clockworkmod.com/
 4. Install nox
 5. npm install -g expo-cli
 6. npm install -g react-native-cli
