@@ -16,7 +16,7 @@
 
 
 # Please note 
-- before starting any create a new branch using <task-type/ticket-number-description>
+- Before starting any create a new branch using <task-type/ticket-number-description>
 Like: feature/2-view-to-display-value-cake
 
-- push your branch to git and raise a pull request to original branch : https://github.com/anupammaiti/college-admission-expo.git
+- Push your branch to git and raise a pull request to original branch : https://github.com/anupammaiti/college-admission-expo.git
