@@ -5,18 +5,13 @@
 4. Install nox
 5. npm install -g expo-cli
 6. npm install -g react-native-cli
-7. git clone https://github.com/anupammaiti/college-admission-expo.git
-8. cd CollegeAdmissionExpo
+7. react-native  init CollegeAdmission
+8. cd CollegeAdmission
+
+
 9. npx react-native run-android
 -cd CollegeAdmissionExpo
 - npm start
 - npm run android (This can be used directly)
 - npm run ios 
 - npm run web
-
-
-# Please note 
-- before starting any create a new branch using <task-type/ticket-number-description>
-Like: feature/2-view-to-display-value-cake
-
-- push your branch to git and raise a pull request to original branch : https://github.com/anupammaiti/college-admission-expo.git
