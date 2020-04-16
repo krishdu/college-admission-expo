@@ -1,11 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text,ScrollView,View } from 'react-native';
 import EmployeeService from './src/components/EmployeeService';
+import Header from './src/components/Header';
 
 export default function App() {
   return (
+    
     <View style={styles.container}>
-       <EmployeeService />
+      <Header/>
+      <View style={styles.content}>
+        {/*....*/}
+        <View style={styles.list}>
+          <EmployeeService />
+        </View>
+      </View>
     </View>
   );
 }
@@ -14,7 +22,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // padding:40,
+    // alignItems: 'center',
+    // justifyContent: 'center',
+  },
+  content:{
+    padding:40,
+  },
+  list:{
+    marginTop:20
   },
 });

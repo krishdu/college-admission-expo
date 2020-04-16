@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text,StyleSheet,TouchableOpacity,FlatList } from 'react-native'
 
 class EmployeeService extends Component {
    state = {
@@ -22,24 +22,60 @@ class EmployeeService extends Component {
    }
    render() {
       return (
-         <View>
-            { this.state.data.map((item) => (
-         <View> 
-            <Text>
-            Employee Name : {item.employee_name}
-            </Text>
-            <Text>
-            Employee Age : {item.employee_age}
-            </Text>
-            <Text>
-            Employee Salary : {item.employee_salary}
-            </Text>
-            <Text>
-            </Text>
-         </View>
-          ))}
-         </View>
+         // <View style={styles.card} >
+         //    { this.state.data.map((item) => (
+         // <View  style={styles.item} > 
+         //    <Text>
+         //    Employee Name : {item.employee_name}
+         //    </Text>
+         //    <Text>
+         //    Employee Age : {item.employee_age}
+         //    </Text>
+         //    <Text>
+         //    Employee Salary : {item.employee_salary}
+         //    </Text>
+         //    <Text>
+         //    </Text>
+         // </View>
+         //  ))}
+         // </View>
+   <View>
+   <FlatList
+    data={this.state.data}
+    renderItem={({ item }) =>
+       <TouchableOpacity onPress={()=>{alert('Touched '+item.employee_name)}}>
+        <View style={styles.item}>
+       <Text >Name:{item.employee_name}</Text>
+       <Text >Age:{item.employee_age}</Text>
+       <Text >Salery:{item.employee_salary}</Text>
+       </View>  
+       </TouchableOpacity>
+      }
+      keyExtractor={(item) => item.id}
+     />
+   </View>
       )
    }
 }
-export default EmployeeService
+const styles=StyleSheet.create({
+// card:{
+//    backgroundColor:'coral',
+//    padding:20,
+// },
+// item:{
+//    padding:10,
+//    backgroundColor:'pink',
+//    marginTop:20,
+//   fontSize:40,
+//   marginHorizontal:20,
+//   margin:10,
+// }
+item:{
+   padding:10,
+   backgroundColor:'pink',
+   marginTop:20,
+  fontSize:40,
+  marginHorizontal:15,
+ },
+});
+export default EmployeeService;
